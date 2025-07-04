@@ -105,4 +105,3 @@ ESP8266 board manager url: http://arduino.esp8266.com/stable/package_esp8266com_
 **Jeet Chatterjee**  
 Email: jeetchatterjee87066@gmail.com  
 LinkedIn: https://www.linkedin.com/in/jeet-chatterjee84/
-GitHub: https://github.com/JEET321084/ 
