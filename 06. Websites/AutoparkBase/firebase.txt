@@ -1,0 +1,7 @@
+apiKey: "AIzaSyCLRKChMnegQ4n26PTUXsGGbK6tJ_qSMVk",
+authDomain: "autopark-ebacf.firebaseapp.com",
+projectId: "autopark-ebacf",
+storageBucket: "autopark-ebacf.appspot.com",
+messagingSenderId: "993070646805",
+appId: "1:993070646805:web:cbe9e4715d5bed2bfa301c",
+measurementId: "G-0JVL1LJX6P"

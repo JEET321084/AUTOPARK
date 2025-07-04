@@ -1,0 +1,38 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCgzQB81vMPNbEAY35LA5aNraLh-ZNN5D8",
+  authDomain: "autoparkadmin.firebaseapp.com",
+  projectId: "autoparkadmin",
+  storageBucket: "autoparkadmin.firebasestorage.app",
+  messagingSenderId: "885714134036",
+  appId: "1:885714134036:web:00364b44619c59ce1f3301"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCgzQB81vMPNbEAY35LA5aNraLh-ZNN5D8",
+    authDomain: "autoparkadmin.firebaseapp.com",
+    projectId: "autoparkadmin",
+    storageBucket: "autoparkadmin.firebasestorage.app",
+    messagingSenderId: "885714134036",
+    appId: "1:885714134036:web:00364b44619c59ce1f3301"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>

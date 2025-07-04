@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Parking System</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+  <!-- QR Code Scanner Library -->
+  <script src="https://cdn.jsdelivr.net/npm/html5-qrcode/minified/html5-qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Car Parking System</h1>
+
+    <!-- QR Scanner -->
+    <div id="scanner-container">
+      <div id="scanner"></div>
+    </div>
+
+    <!-- Scanned Result & Buttons -->
+    <div id="result">
+      <p><strong>Scanned QR Code:</strong> <span id="qr-result">None</span></p>
+      <button id="log-entry" disabled>Log Entry</button>
+      <button id="log-exit" disabled>Log Exit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

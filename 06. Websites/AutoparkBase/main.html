@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUTOPARK Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+<script type="module" src="main.js"></script>
+
+
+</head>
+<body>
+  <div class="blur-background">
+    <img src="background.jpg.jpg" alt="Background" class="background-image">
+    <div class="container fade-in">
+      <header>
+        <h1>AUTOPARK Dashboard</h1>
+      </header>
+
+      <div class="qr-section">
+        <h2>Your QR Code</h2>
+        <img id="qrCodeImage" alt="Your QR Code">
+      </div>
+
+      <div class="main-content">
+        <h2>Real-Time Parking Slot Availability</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>SLOT NUMBER</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>P1</td>
+              <td id="slot1">Loading...</td>
+            </tr>
+            <tr>
+              <td>P2</td>
+              <td id="slot2">Loading...</td>
+            </tr>
+            <tr>
+              <td>P3</td>
+              <td id="slot3">Loading...</td>
+            </tr>
+            <tr>
+              <td>P4</td>
+              <td id="slot4">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+	<div class="logout-section">
+        <button id="logoutBtn" class="logout-btn-red"><span>Logout</span></button>
+      </div>
+          </div>
+  </div>
+</body>
+</html>

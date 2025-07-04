@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - AUTOPARK</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+
+  <!-- Firebase SDK setup using module -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCLRKChMnegQ4n26PTUXsGGbK6tJ_qSMVk",
+      authDomain: "autopark-ebacf.firebaseapp.com",
+      projectId: "autopark-ebacf",
+      storageBucket: "autopark-ebacf.appspot.com",
+      messagingSenderId: "993070646805",
+      appId: "1:993070646805:web:cbe9e4715d5bed2bfa301c",
+      measurementId: "G-0JVL1LJX6P"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    window.firebaseConfig = { app, auth }; // Expose auth to login.js
+  </script>
+</head>
+<body>
+  <div class="blur-background">
+    <img src="background.jpg.jpg" alt="Background" class="background-image">
+    <div class="container fade-in">
+      <header>
+        <h1>Login to AUTOPARK</h1>
+      </header>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+        </div>
+        <p id="errorMessage" style="color: red;"></p>
+        <button type="submit" class="button-glow-3d"><span>Login</span></button>
+	<p><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+	<p id="forgotMessage" style="color: green;"></p>
+      </form>
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </div>
+
+  <!-- Login JS -->
+  <script type="module" src="login.js"></script>
+</body>
+</html>

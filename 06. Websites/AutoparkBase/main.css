@@ -1,0 +1,140 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+color: #f0f0f0;
+min-height: 100vh;
+}
+  
+.blur-background {
+    position: relative;
+    width: 100%;
+overflow:visible;
+}
+  
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px); /* Apply blur effect */
+z-index:-1;
+}
+  
+.container {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: rgba(30, 30, 30, 0.75);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+  
+header {
+    margin-bottom: 30px;
+}
+  
+.qr-section {
+    margin: 20px 0;
+}
+
+.qr-section img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+  
+th {
+    background-color: #222;
+}
+  
+#dataDisplay {
+    font-size: 1.2em;
+}
+.logout-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logout-btn-red {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #ff4d4d;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  z-index: 1;
+  box-shadow: none;
+}
+
+.logout-btn-red::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff4d4d;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.logout-btn-red:hover::before {
+  transform: scaleX(1);
+}
+
+.logout-btn-red span {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.logout-btn-red:hover span {
+  color: #000;
+}
+
+.logout-btn-red:hover {
+  box-shadow: 0 0 12px #ff4d4d, 0 0 24px #ff4d4d;
+}
+
+.logout-btn-red:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 6px #ff4d4d;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+

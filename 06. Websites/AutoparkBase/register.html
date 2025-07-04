@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - AUTOPARK</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="register.css">
+
+  <!-- Firebase SDK setup using type="module" -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCLRKChMnegQ4n26PTUXsGGbK6tJ_qSMVk",
+      authDomain: "autopark-ebacf.firebaseapp.com",
+      projectId: "autopark-ebacf",
+      storageBucket: "autopark-ebacf.appspot.com",
+      messagingSenderId: "993070646805",
+      appId: "1:993070646805:web:cbe9e4715d5bed2bfa301c",
+      measurementId: "G-0JVL1LJX6P"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // Make auth and db accessible in register.js
+    window.firebaseConfig = { auth, db };
+  </script>
+</head>
+<body>
+  <div class="blur-background">
+    <img src="background.jpg.jpg" alt="Background" class="background-image">
+    <div class="container fade-in">
+      <header>
+        <h1>Create Your AUTOPARK Account</h1>
+      </header>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+        </div>
+        <div class="form-group">
+          <label for="vehicleNumber">Vehicle Number:</label>
+          <input type="text" id="vehicleNumber" required />
+        </div>
+        <p id="errorMessage" style="color: red;"></p>
+        <button type="submit" class="button-glow-3d"><span>Register</span></button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+  </div>
+
+  <!-- Modular JS -->
+  <script type="module" src="register.js"></script>
+</body>
+</html>
